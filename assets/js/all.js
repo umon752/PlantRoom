@@ -1,5 +1,52 @@
+const time = 1500;
+// Anime.js
+anime.timeline({
+        loop: false
+    })
+    .add({
+        targets: '.loading__line--top',
+        scaleX: [0, 1],
+        opacity: [0.5, 1],
+        easing: "easeInOutSine",
+        duration: 300
+    })
+    .add({
+        targets: '.loading__line--left',
+        scaleY: [0, 1],
+        opacity: [0.5, 1],
+        easing: "easeInOutSine",
+        duration: 300
+    })
+    .add({
+        targets: '.loading__line--bottom',
+        scaleX: [0, 1],
+        opacity: [0.5, 1],
+        easing: "easeInOutSine",
+        duration: 300
+    })
+    .add({
+        targets: '.loading__line--right',
+        scaleY: [0, 1],
+        opacity: [0.5, 1],
+        easing: "easeInOutSine",
+        duration: 300
+    })
+    .add({
+        targets: '.loading__img',
+        translateX: ["1em", 0],
+        opacity: [0, 1],
+        easing: "easeInOutSine",
+        duration: 200
+    })
+
 // animated-fadeIn
 $(document).ready(function () {
+    /* 1.3 秒後開始執行 */
+    setTimeout(function () {
+        // 設定 loading 畫面消失
+        $('.loading').addClass('loading--fadeOut');
+    }, time);
+
     // index
     $(window).scroll(function () {
         var scrollPos = $(window).scrollTop();

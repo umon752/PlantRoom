@@ -1,0 +1,57 @@
+.loading {
+    background-color: rgba(255, 255, 255, 0.9);
+
+    &--fadeOut {
+        display: none !important;
+        opacity: 0;
+        transition: all .5s;
+    }
+
+    &__img {
+        width: 150px;
+    }
+
+    &__line--top {
+        opacity: 0;
+        position: absolute;
+        left: 0;
+        height: 2px;
+        width: 100%;
+        background-color: rgb(88, 88, 88);
+        transform-origin: bottom right;
+        top: 0;
+    }
+
+    &__line--bottom {
+        opacity: 0;
+        position: absolute;
+        left: 0;
+        height: 2px;
+        width: 100%;
+        background-color: rgb(88, 88, 88);
+        transform-origin: top left;
+        bottom: 0;
+    }
+
+    &__line--left {
+        opacity: 0;
+        position: absolute;
+        left: 0;
+        height: 100%;
+        width: 2px;
+        background-color: rgb(88, 88, 88);
+        transform-origin: top left;
+        top: 0;
+    }
+
+    &__line--right {
+        opacity: 0;
+        position: absolute;
+        right: 0;
+        height: 100%;
+        width: 2px;
+        background-color: rgb(88, 88, 88);
+        transform-origin: bottom right;
+        bottom: 0;
+    }
+}
