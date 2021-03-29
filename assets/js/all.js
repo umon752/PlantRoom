@@ -41,7 +41,7 @@ anime.timeline({
 
 // animated-fadeIn
 $(document).ready(function () {
-    /* 1.3 秒後開始執行 */
+    /* 1.5 秒後開始執行 */
     setTimeout(function () {
         // 設定 loading 畫面消失
         $('.loading').addClass('loading--fadeOut');
