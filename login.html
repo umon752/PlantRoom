@@ -134,7 +134,7 @@
     </section>
 
     <!-- footer -->
-    <footer class="bg-brand-gray mt-md-6 pb-5">
+    <footer class="bg-brand-gray mt-lg-8 pb-5">
         <!-- mail -->
         <section>
             <div class="container">
@@ -165,7 +165,9 @@
             <div class="container">
                 <div class="row pt-5">
                     <div class="col-md-6">
-                        <img src="img/logo/logo.svg" width="70" alt="Planet Room Logo">
+                        <a href="./index.html">
+                            <img src="img/logo/logo.svg" width="70" alt="Planet Room Logo">
+                        </a>
                         <ul class="p-0 mt-5 font-weight-light">
                             <li>07-1234-5678</li>
                             <li>planet_room@email.com</li>
@@ -198,26 +200,6 @@
 <!-- js -->
 <script src="assets/bootstrap/js/jquery-3.4.1.slim.min.js"></script>
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-<!-- from-js -->
-<script>
-    // Example starter JavaScript for disabling form submissions if there are invalid fields
-    (function () {
-        'use strict';
-        window.addEventListener('load', function () {
-            // Fetch all the forms we want to apply custom Bootstrap validation styles to
-            var forms = document.getElementsByClassName('needs-validation');
-            // Loop over them and prevent submission
-            var validation = Array.prototype.filter.call(forms, function (form) {
-                form.addEventListener('submit', function (event) {
-                    if (form.checkValidity() === false) {
-                        event.preventDefault();
-                        event.stopPropagation();
-                    }
-                    form.classList.add('was-validated');
-                }, false);
-            });
-        }, false);
-    })();
-</script>
+<script src="assets/js/all.js"></script>
 
 </html>

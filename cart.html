@@ -237,7 +237,7 @@
     </section>
 
     <!-- footer -->
-    <footer class="bg-brand-gray mt-md-6 pb-5">
+    <footer class="bg-brand-gray mt-lg-8 pb-5">
         <!-- mail -->
         <section>
             <div class="container">
@@ -268,7 +268,9 @@
             <div class="container">
                 <div class="row pt-5">
                     <div class="col-md-6">
-                        <img src="img/logo/logo.svg" width="70" alt="Planet Room Logo">
+                        <a href="./index.html">
+                            <img src="img/logo/logo.svg" width="70" alt="Planet Room Logo">
+                        </a>
                         <ul class="p-0 mt-5 font-weight-light">
                             <li>07-1234-5678</li>
                             <li>planet_room@email.com</li>
@@ -325,21 +327,6 @@
 <!-- js -->
 <script src="assets/bootstrap/js/jquery-3.4.1.slim.min.js"></script>
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-<!-- Modal - js -->
-<script>
-    $(document).ready(function () {
-        $('[data-toggle="tooltip"]').tooltip()
-
-        $('#removeModal').on('show.bs.modal', function (event) {
-            var btn = $(event.relatedTarget) // Button that triggered the modal
-            var title = btn.data('title') // Extract info from data-* attributes
-            // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-            // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-            var modal = $(this);
-            modal.find('.modal-title').text(title);
-            // modal.find('.modal-body input').val(recipient)
-        })
-    });
-</script>
+<script src="assets/js/all.js"></script>
 
 </html>

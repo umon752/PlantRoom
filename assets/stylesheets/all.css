@@ -10495,6 +10495,10 @@ a.text-white:hover, a.text-white:focus {
     color: inherit;
     border-color: #dee2e6; } }
 
+* input,
+* button:focus {
+  outline: none !important; }
+
 body a {
   -webkit-transition: all 300ms linear !important;
   -o-transition: all 300ms linear !important;

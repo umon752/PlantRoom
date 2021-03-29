@@ -1,19 +1,32 @@
+* {
+
+    input,
+    button:focus {
+        outline: none !important;
+    }
+}
+
 body {
     a {
-        transition: all 300ms linear!important;
+        transition: all 300ms linear !important;
     }
-    p{
+
+    p {
         color: theme-color("brand-gray-dark");
     }
+
     ul {
         list-style: none;
     }
+
     input {
         border: none;
+
         &:focus {
             outline: none;
         }
     }
+
     // select-icon-none
     select {
         -moz-appearance: none;
