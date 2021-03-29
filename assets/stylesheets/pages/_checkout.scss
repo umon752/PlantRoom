@@ -1,0 +1,52 @@
+.step__group {
+    position: relative;
+    &--line {
+        position: absolute;
+        border-top: 1px solid #FFF;
+        top: 50%;
+        width: 100%;
+    }
+    .step__circle {
+        position: relative;
+        display: block;
+        border-radius: 50%;
+        height: 20px;
+        width: 20px;
+        border: 1px solid #FFF;
+        background-color: theme-color("brand-gray");
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+.step__circle {
+    &.active::after {
+        content: "";
+        display: block;
+        border-radius: 50%;
+        height: 12px;
+        width: 12px;
+        background-color: #FFF;
+    }
+    &.completed::after {
+        content: "\f00c";
+        font-family: "FontAwesome";
+        display: block;
+        height: 20px;
+        width: 20px;
+        color: theme-color("brand-gray");
+        border-radius: 50%;
+        background-color: #FFF;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+.border--color {
+    border: 1px solid theme-color("brand-green-lighter");
+}
+.nav-item:hover {
+    transform: translateX(0px);
+    transition: none;
+}

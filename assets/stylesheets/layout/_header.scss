@@ -1,0 +1,162 @@
+// logo
+.logo {
+    width: 60px;
+}
+
+// head-btn
+// h1-text
+.head__btn {
+    position: absolute;
+    bottom: 0;
+    z-index: 100;
+    width: 100%;
+
+    &--text {
+        letter-spacing: 5px;
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    &--bg {
+        position: absolute;
+        right: -2px;
+        left: -2px;
+        top: -2px;
+        bottom: -2px;
+        filter: blur(5px);
+        z-index: -2;
+        transition: filter .5s;
+    }
+}
+
+.head__text {
+    &--large {
+        font-size: 5rem;
+    }
+
+    &--justify {
+        letter-spacing: 21px;
+    }
+}
+
+// btn-item
+.btn-item {
+    width: 100%;
+    position: relative;
+    writing-mode: vertical-lr;
+    overflow: hidden;
+    bottom: -80px;
+
+    &:hover>.head__btn--bg {
+        filter: blur(0px);
+    }
+
+    span {
+        z-index: 10;
+    }
+}
+
+.bg--cover--blur {
+    position: absolute;
+    right: 0px;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    background-color: theme-color("brand-gray-light");
+    opacity: .2;
+    z-index: 1;
+}
+
+// introduction
+// area-1~2
+.introduction {
+    &__img--height {
+        min-height: 300px;
+    }
+
+    &__title {
+        font-family: "MingLiU";
+        letter-spacing: .2rem;
+    }
+
+    &__text--theme {
+        max-height: 400px;
+        line-height: 2;
+    }
+}
+
+// area-3-products
+.card img {
+    position: relative;
+}
+
+.card__item {
+    &--tag {
+        position: absolute;
+        top: 0px;
+        left: 40px;
+        padding: .6rem;
+        writing-mode: vertical-rl;
+        background-color: theme-color("brand-green");
+        color: #fff;
+        letter-spacing: 5px;
+    }
+
+    &--img {
+        height: 300px;
+        width: 100%;
+        background-size: cover;
+        background-position: center center;
+    }
+}
+
+
+
+// col-md //
+@media (min-width:768px) {
+
+    // main-btn
+    .btn-item {
+        bottom: 0px;
+    }
+
+    // introduction
+    .introduction {
+        &-height {
+            margin-top: -24px;
+            margin-bottom: -24px;
+        }
+
+        &-bottom {
+            transform: translateY(60px);
+        }
+
+        &-top {
+            transform: translateY(-60px);
+        }
+
+        &__title,
+        &__text--theme {
+            writing-mode: vertical-rl;
+        }
+
+        &__text--theme {
+            max-height: 330px;
+            line-height: 1.5;
+        }
+    }
+}
+
+
+
+// col-lg //
+@media (min-width:992px) {
+
+    // logo
+    .logo {
+        width: 90px;
+    }
+
+    .introduction__text--theme {
+        max-height: 400px;
+    }
+}

@@ -1,0 +1,32 @@
+// mail
+.input__mailIcon {
+    position: absolute;
+    top: 9px;
+    left: 12px;
+    &--square {
+        position: relative;
+        padding: 5px 20px;
+    } 
+}
+.footer__communityIcon {
+    font-size: 2rem;
+    a {
+        color: theme-color("brand-green");
+        &:hover {
+            color: theme-color("brand-green-light");
+        }
+    }
+}
+// information
+.footer__slogan--text {
+    letter-spacing: .3rem;
+}
+
+
+
+// col-md //
+@media (min-width:768px) {
+    .footer__slogan--text {
+        writing-mode: vertical-rl;    
+    }
+}

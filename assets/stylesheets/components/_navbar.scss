@@ -1,0 +1,33 @@
+.navbar {
+    font-size: 16px;
+
+    &-brand img {
+        transition: all 300ms linear;
+
+        &:hover {
+            // transform: translateX(-5px);
+            opacity: .8;
+            transition: all 300ms linear;
+        }
+    }
+
+    &__container {
+        max-width: 1620px;
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    // &__position--before {
+    //     width: 100%;
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     z-index: 100;
+    //     background-color: rgba(0, 0, 0, 0.5);
+    // }
+}
+
+.nav-item:hover {
+    transform: translateX(-5px);
+}

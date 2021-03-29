@@ -1,0 +1,39 @@
+.quantity--block:hover {
+    background: transparent;
+}
+.total {
+    &__title--bgColor {
+        background-color: theme-color("brand-gray");
+    }
+    &__block--bgColor {
+        background-color: transparent;
+    }
+}
+.modal {
+    position: fixed;
+    top: 30%;
+    left: 0%;
+    z-index: 1050;
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    outline: 0;
+}
+
+
+// col-md //
+@media (min-width:768px) {
+    .total {
+        &__title--bgColor {
+            background-color: transparent;
+        }
+        &__block--bgColor {
+            background-color: theme-color("brand-gray-light");
+        }
+    }
+    .modal {
+        top: 0;
+        left: 0;
+    }
+}
