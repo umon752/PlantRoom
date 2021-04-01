@@ -10776,6 +10776,9 @@ body textarea {
 .footer__slogan--text {
   letter-spacing: .3rem; }
 
+footer .form-input {
+  width: 180px; }
+
 @media (min-width: 768px) {
   .footer__slogan--text {
     -webkit-writing-mode: vertical-rl;
@@ -10790,8 +10793,6 @@ body textarea {
   border: 1px solid #E4E4E4; }
   .community__btn--border:hover {
     border: 1px solid #ccc; }
-  .community__btn--border img {
-    width: 80px; }
 
 .title--relative {
   position: relative; }
