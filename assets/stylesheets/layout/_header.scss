@@ -45,6 +45,7 @@
     writing-mode: vertical-lr;
     overflow: hidden;
     bottom: -80px;
+    height: 130px;
 
     &:hover>.head__btn--bg {
         filter: blur(0px);
@@ -117,6 +118,7 @@
     // main-btn
     .btn-item {
         bottom: 0px;
+        height: 200px;
     }
 
     // introduction

@@ -1,23 +1,31 @@
 .community__btn--border {
     border: 1px solid theme-color("brand-gray-light");
+
     &:hover {
         border: 1px solid #ccc;
     }
+
+    img {
+        width: 80px;
+    }
 }
+
 .title--relative {
     position: relative;
 }
+
 .title--dividingLine {
     &::before {
-    content: " ";
-    position: absolute;
-    height: 2px;
-    background: theme-color("brand-gray");
-    width: 40px;
-    top: 50%;
-    left: 45px;
-    display: none;
+        content: " ";
+        position: absolute;
+        height: 2px;
+        background: theme-color("brand-gray");
+        width: 40px;
+        top: 50%;
+        left: 45px;
+        display: none;
     }
+
     &::after {
         content: " ";
         position: absolute;
@@ -29,7 +37,9 @@
         display: none;
     }
 }
-.was-validated .custom-control-input:valid:checked ~ .custom-control-label::before, .custom-control-input.is-valid:checked ~ .custom-control-label::before {
+
+.was-validated .custom-control-input:valid:checked~.custom-control-label::before,
+.custom-control-input.is-valid:checked~.custom-control-label::before {
     color: #fff;
     border-color: #FFF;
     background-color: theme-color("brand-gray");
@@ -37,11 +47,15 @@
 
 
 
+
 // 1366px //
 @media (min-width:1366px) {
+
     //* login *//
     .title--dividingLine {
-        &::before , &::after {
+
+        &::before,
+        &::after {
             display: block;
         }
     }

@@ -1,28 +1,28 @@
 /* bs4 */
-@import"../bootstrap/scss/functions";
-@import"./helps/variables";
-@import"../bootstrap/scss/bootstrap.scss";
+@import "../bootstrap/scss/functions";
+@import "./helps/variables";
+@import "../bootstrap/scss/bootstrap.scss";
 
 /* fonts */
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900&display=swap&subset=chinese-traditional');
 
 /* base */
-@import"./base/base";
+@import "./base/base";
 
 /* components */
-@import"./components/animated";
-@import"./components/navbar";
-@import"./components/carousel";
-@import"./components/theme";
+@import "./components/animated";
+@import "./components/navbar";
+@import "./components/carousel";
+@import "./components/theme";
 
 /* layout */
-@import"./layout/loading";
-@import"./layout/header";
-@import"./layout/footer";
+@import "./layout/loading";
+@import "./layout/header";
+@import "./layout/footer";
 
 /* pages */
-@import"./pages/product";
-@import"./pages/login";
-@import"./pages/cart";
-@import"./pages/checkout";
-@import"./pages/success";
+@import "./pages/product";
+@import "./pages/login";
+@import "./pages/cart";
+@import "./pages/checkout";
+@import "./pages/success";

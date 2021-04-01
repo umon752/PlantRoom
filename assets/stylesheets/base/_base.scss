@@ -21,16 +21,15 @@ body {
 
     input {
         border: none;
-
-        &:focus {
-            outline: none;
-        }
     }
 
-    // select-icon-none
-    select {
+    // Safari 和 Chrome，常用於 iOS 下移除內建樣式
+    input,
+    select,
+    textarea {
         -moz-appearance: none;
         -webkit-appearance: none;
         appearance: none;
+        border-radius: 0;
     }
 }
