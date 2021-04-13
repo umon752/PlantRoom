@@ -1,7 +1,7 @@
-const time = 1500;
-// Anime.js
-anime.timeline({
-        loop: false
+function loading() {
+    // Anime loading 動畫
+    let animation = anime.timeline({
+        loop: true
     })
     .add({
         targets: '.loading__line--top',
@@ -39,47 +39,53 @@ anime.timeline({
         duration: 200
     })
 
-// animated-fadeIn
-$(document).ready(function () {
-    /* 1.5 秒後開始執行 */
-    setTimeout(function () {
-        // 設定 loading 畫面消失
-        $('.loading').addClass('loading--fadeOut');
-    }, time);
+    $(window).ready(function () {
+        setTimeout(function() {
+            // Loading 畫面消失
+            $('.loading').addClass('loading--fadeOut');
 
-    // index
-    $(window).scroll(function () {
-        var scrollPos = $(window).scrollTop();
-        var windowHeight = $(window).height();
+            // Anime 停止
+            animation.pause();
 
-        $('.animated').each(function () {
-            var thisPos = $(this).offset().top;
-            if ((windowHeight + scrollPos) >= thisPos) {
-                $(this).addClass('fadeIn');
-            }
-        });
+            // 動態滑入顯示
+            $(window).scroll(function () {
+                let scrollPos = $(window).scrollTop();
+                let windowHeight = $(window).height();
+
+                $('.animated').each(function () {
+                    let thisPos = $(this).offset().top;
+                    if ((windowHeight + scrollPos) >= thisPos) {
+                        $(this).addClass('fadeIn');
+                    }
+                });
+            });
+        }, 1300);
+
     });
+}
 
 
+$(document).ready(function () {
+    // 載入 Laoding
+    loading();
 
-    // cart - modal
+    // cart.html > modal
     $('[data-toggle="tooltip"]').tooltip()
     $('#removeModal').on('show.bs.modal', function (event) {
-        var btn = $(event.relatedTarget) // Button that triggered the modal
-        var title = btn.data('title') // Extract info from data-* attributes
+        let btn = $(event.relatedTarget) // Button that triggered the modal
+        let title = btn.data('title') // Extract info from data-* attributes
         // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
         // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-        var modal = $(this);
+        let modal = $(this);
         modal.find('.modal-title').text(title);
         // modal.find('.modal-body input').val(recipient)
     })
 
-
-    // login - form
+    // login.html > form
     // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    var forms = document.getElementsByClassName('needs-validation');
+    const forms = document.getElementsByClassName('needs-validation');
     // Loop over them and prevent submission
-    var validation = Array.prototype.filter.call(forms, function (form) {
+    let validation = Array.prototype.filter.call(forms, function (form) {
         form.addEventListener('submit', function (event) {
             if (form.checkValidity() === false) {
                 event.preventDefault();
