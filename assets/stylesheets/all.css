@@ -10563,16 +10563,20 @@ body textarea {
   transform: translateX(-5px); }
 
 .carousel__img--height {
-  height: 490px; }
+  height: 430px; }
 
 .carousel-inner {
   position: relative; }
 
 @media (min-width: 768px) {
   .carousel__img--height {
-    height: 700px; } }
+    height: 650px; } }
 
 @media (min-width: 960px) {
+  .carousel__img--height {
+    height: 600px; } }
+
+@media (min-width: 1200px) {
   .carousel__img--height {
     height: 750px; } }
 

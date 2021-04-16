@@ -1,7 +1,7 @@
 .carousel {
 
     &__img--height {
-        height: 490px;
+        height: 430px;
         // @include media-breakpoint-up(md) {
         //     height: 700px;
         // }
@@ -21,12 +21,20 @@
 @media (min-width:768px) {
     .carousel {
         &__img--height {
-            height: 700px;
+            height: 650px;
         }
     }
 }
 
 @media (min-width:960px) {
+    .carousel {
+        &__img--height {
+            height: 600px;
+        }
+    }
+}
+
+@media (min-width:1200px) {
     .carousel {
         &__img--height {
             height: 750px;
