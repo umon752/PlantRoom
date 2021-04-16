@@ -1,46 +1,46 @@
 function loading() {
     // Anime loading 動畫
     let animation = anime.timeline({
-        loop: true
-    })
-    .add({
-        targets: '.loading__line--top',
-        scaleX: [0, 1],
-        opacity: [0.5, 1],
-        easing: "easeInOutSine",
-        duration: 300
-    })
-    .add({
-        targets: '.loading__line--left',
-        scaleY: [0, 1],
-        opacity: [0.5, 1],
-        easing: "easeInOutSine",
-        duration: 300
-    })
-    .add({
-        targets: '.loading__line--bottom',
-        scaleX: [0, 1],
-        opacity: [0.5, 1],
-        easing: "easeInOutSine",
-        duration: 300
-    })
-    .add({
-        targets: '.loading__line--right',
-        scaleY: [0, 1],
-        opacity: [0.5, 1],
-        easing: "easeInOutSine",
-        duration: 300
-    })
-    .add({
-        targets: '.loading__img',
-        translateX: ["1em", 0],
-        opacity: [0, 1],
-        easing: "easeInOutSine",
-        duration: 200
-    })
+            loop: true
+        })
+        .add({
+            targets: '.loading__line--top',
+            scaleX: [0, 1],
+            opacity: [0.5, 1],
+            easing: "easeInOutSine",
+            duration: 100
+        })
+        .add({
+            targets: '.loading__line--left',
+            scaleY: [0, 1],
+            opacity: [0.5, 1],
+            easing: "easeInOutSine",
+            duration: 100
+        })
+        .add({
+            targets: '.loading__line--bottom',
+            scaleX: [0, 1],
+            opacity: [0.5, 1],
+            easing: "easeInOutSine",
+            duration: 100
+        })
+        .add({
+            targets: '.loading__line--right',
+            scaleY: [0, 1],
+            opacity: [0.5, 1],
+            easing: "easeInOutSine",
+            duration: 100
+        })
+        .add({
+            targets: '.loading__img',
+            translateX: ["1em", 0],
+            opacity: [0, 1],
+            easing: "easeInOutSine",
+            duration: 400
+        })
 
-    $(window).ready(function () {
-        setTimeout(function() {
+    $(window).on('load', function () {
+        setTimeout(function () {
             // Loading 畫面消失
             $('.loading').addClass('loading--fadeOut');
 
@@ -59,7 +59,7 @@ function loading() {
                     }
                 });
             });
-        }, 1300);
+        }, 850);
 
     });
 }
