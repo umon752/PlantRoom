@@ -40,26 +40,25 @@ function loading() {
         })
 
     $(window).on('load', function () {
-        setTimeout(function () {
-            // Loading 畫面消失
-            $('.loading').addClass('loading--fadeOut');
 
-            // Anime 停止
-            animation.pause();
+        // Loading 畫面消失
+        $('.loading').addClass('loading--fadeOut');
 
-            // 動態滑入顯示
-            $(window).scroll(function () {
-                let scrollPos = $(window).scrollTop();
-                let windowHeight = $(window).height();
+        // Anime 停止
+        animation.pause();
 
-                $('.animated').each(function () {
-                    let thisPos = $(this).offset().top;
-                    if ((windowHeight + scrollPos) >= thisPos) {
-                        $(this).addClass('fadeIn');
-                    }
-                });
+        // 動態滑入顯示
+        $(window).scroll(function () {
+            let scrollPos = $(window).scrollTop();
+            let windowHeight = $(window).height();
+
+            $('.animated').each(function () {
+                let thisPos = $(this).offset().top;
+                if ((windowHeight + scrollPos) >= thisPos) {
+                    $(this).addClass('fadeIn');
+                }
             });
-        }, 850);
+        });
 
     });
 }
