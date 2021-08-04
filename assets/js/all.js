@@ -71,19 +71,14 @@ $(document).ready(function () {
     // cart.html > modal
     $('[data-toggle="tooltip"]').tooltip()
     $('#removeModal').on('show.bs.modal', function (event) {
-        let btn = $(event.relatedTarget) // Button that triggered the modal
-        let title = btn.data('title') // Extract info from data-* attributes
-        // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-        // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+        let btn = $(event.relatedTarget)
+        let title = btn.data('title') 
         let modal = $(this);
         modal.find('.modal-title').text(title);
-        // modal.find('.modal-body input').val(recipient)
     })
 
     // login.html > form
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
     const forms = document.getElementsByClassName('needs-validation');
-    // Loop over them and prevent submission
     let validation = Array.prototype.filter.call(forms, function (form) {
         form.addEventListener('submit', function (event) {
             if (form.checkValidity() === false) {
